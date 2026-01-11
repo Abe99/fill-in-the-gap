@@ -1,1 +1,59 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TOEIC Practice</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<main id="app">
+
+  <!-- INTRO -->
+  <section id="screen-intro" class="screen">
+    <h1>TOEIC Practice</h1>
+    <p>Complete the sentences using the correct word or expression.</p>
+    <p class="instruction">Press <strong>Enter</strong> to begin</p>
+  </section>
+
+  <!-- CHAPTER SELECTION -->
+  <section id="screen-chapters" class="screen" hidden>
+    <h2>Select a Chapter</h2>
+    <ul class="chapter-list">
+      <li class="chapter-item" aria-selected="true">Chapter 1 – Trends & Changes</li>
+    </ul>
+    <p class="instruction">Press <strong>Enter</strong> to start</p>
+  </section>
+
+  <!-- QUESTION -->
+  <section id="screen-question" class="screen" hidden>
+
+    <header class="question-header">
+      <span id="question-counter"></span>
+    </header>
+
+    <div class="question-body">
+      <p id="sentence-1" class="sentence reference"></p>
+      <p id="sentence-2" class="sentence target"></p>
+      <p id="hint" class="hint" hidden></p>
+    </div>
+
+    <aside class="word-box">
+      <ul id="word-list"></ul>
+    </aside>
+
+  </section>
+
+  <!-- COMPLETE -->
+  <section id="screen-complete" class="screen" hidden>
+    <h2>Chapter Complete</h2>
+    <p class="instruction">Press <strong>Enter</strong> to return to chapters</p>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
