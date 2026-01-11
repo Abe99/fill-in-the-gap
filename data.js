@@ -1,150 +1,210 @@
 /* ======================================================
-   EXERCISE 7 – CONTINUING, REPEATING & STARTING AGAIN
-   (WORD-BOX VERSION – EXTENDED)
+   EXERCISE 8 – EARNINGS, REWARDS & BENEFITS
+   (WORD-BOX VERSION)
    ====================================================== */
 
-exercises.continuing = {
+exercises.earnings = {
   type: "transform",
   words: [
-    "resume",
-    "return",
-    "maintain",
-    "persistent",
-    "continuous",
-    "continually",
-    "persevere",
-    "reopen",
-    "steady",
-    "perpetuate",
-    "continue",
-    "repeatedly",
-    "progressing",
-    "revert",
-    "keep it up"
+    "salary",
+    "remuneration",
+    "overtime",
+    "increment",
+    "deduction",
+    "minimum wage",
+    "double time",
+    "pension plan",
+    "raise",
+    "advance",
+    "payslip",
+    "bonus",
+    "payroll",
+    "rewards package",
+    "weighting",
+    "leave entitlement",
+    "income",
+    "expenditure",
+    "job satisfaction",
+    "commission",
+    "stock options",
+    "incentive plan",
+    "rate",
+    "redundancy pay",
+    "discount",
+    "relocation allowance",
+    "profit sharing",
+    "gross",
+    "net",
+    "index-linked",
+    "performance-related",
+    "commensurate",
+    "golden handshake"
   ],
   questions: [
     {
-      sentence1:
-        "The production line has been temporarily shut down, but we hope to start production again as soon as possible.",
-      sentence2: { before: "We hope to ", after: " production as soon as possible." },
-      answer: "resume"
+      sentence1: "A wage is usually paid weekly.",
+      sentence2: { before: "A ", after: " is usually paid monthly." },
+      answer: "salary"
     },
     {
-      sentence1:
-        "I would like to talk again about the previous subject of overdue payments.",
-      sentence2: { before: "I would like to ", after: " to the previous subject of overdue payments." },
-      answer: "return"
+      sentence1: "There is a formal word for money paid for work.",
+      sentence2: { before: "That word is ", after: "." },
+      answer: "remuneration"
     },
     {
-      sentence1:
-        "We like to keep good relations with our customers.",
-      sentence2: { before: "We like to ", after: " good relations with our customers." },
-      answer: "maintain"
+      sentence1: "Money earned for working extra hours.",
+      sentence2: { before: "This is called ", after: "." },
+      answer: "overtime"
     },
     {
-      sentence1:
-        "If it gives us repeated problems, I suggest we get a new one.",
-      sentence2: { before: "If it gives us ", after: " problems, I suggest we get a new one." },
-      answer: "persistent"
+      sentence1: "An automatic increase in pay.",
+      sentence2: { before: "This is called an ", after: "." },
+      answer: "increment"
     },
     {
-      sentence1:
-        "A repeated tone means the number is busy.",
-      sentence2: { before: "A ", after: " tone means the number is busy." },
-      answer: "continuous"
+      sentence1: "Money removed from pay for tax and insurance.",
+      sentence2: { before: "This is called a ", after: "." },
+      answer: "deduction"
     },
     {
-      sentence1:
-        "I suggest we keep going and hope that recovery comes soon.",
-      sentence2: { before: "I suggest we ", after: " and hope that recovery comes soon." },
-      answer: "persevere"
+      sentence1: "The lowest legal hourly pay.",
+      sentence2: { before: "This is the ", after: "." },
+      answer: "minimum wage"
     },
     {
-      sentence1:
-        "The hotel will open again in time for the Thanksgiving holiday.",
-      sentence2: { before: "The hotel will ", after: " in time for the Thanksgiving holiday." },
-      answer: "reopen"
+      sentence1: "Pay at twice the normal rate.",
+      sentence2: { before: "This is called ", after: "." },
+      answer: "double time"
     },
     {
-      sentence1:
-        "Unemployment figures have fallen every year.",
-      sentence2: { before: "There has been a ", after: " decrease in unemployment." },
-      answer: "steady"
+      sentence1: "A way to save money for retirement.",
+      sentence2: { before: "This is a ", after: "." },
+      answer: "pension plan"
     },
     {
-      sentence1:
-        "The report will help keep the rumor alive.",
-      sentence2: { before: "The report will ", after: " the rumor." },
-      answer: "perpetuate"
+      sentence1: "More money for the same job.",
+      sentence2: { before: "You ask for a ", after: "." },
+      answer: "raise"
     },
     {
-      sentence1:
-        "If you keep coming late, we will dismiss you.",
-      sentence2: { before: "If you ", after: " coming late, we will dismiss you." },
-      answer: "continue"
-    },
-
-    /* ===== NEW SENTENCES ADDED ===== */
-
-    {
-      sentence1:
-        "We have asked them many times to send us the invoice, but they have ignored us every time.",
-      sentence2: { before: "We have asked them ", after: " to send us the invoice." },
-      answer: "repeatedly"
+      sentence1: "Money paid before payday.",
+      sentence2: { before: "This is called an ", after: "." },
+      answer: "advance"
     },
     {
-      sentence1:
-        "The air conditioning keeps breaking down, usually when it's really hot.",
-      sentence2: { before: "The air conditioning is ", after: " breaking down." },
-      answer: "continually"
+      sentence1: "A document showing earnings and deductions.",
+      sentence2: { before: "This is a ", after: "." },
+      answer: "payslip"
     },
     {
-      sentence1:
-        "If this problem continues, we will have to start making staff cutbacks.",
-      sentence2: { before: "If this problem ", after: ", we will have to start making staff cutbacks." },
-      answer: "continues"
+      sentence1: "Extra payment for good sales.",
+      sentence2: { before: "This is a ", after: "." },
+      answer: "bonus"
     },
     {
-      sentence1:
-        "Rail services will start again early next week.",
-      sentence2: { before: "Rail services will ", after: " early next week." },
-      answer: "resume"
+      sentence1: "A list of all paid employees.",
+      sentence2: { before: "This is the ", after: "." },
+      answer: "payroll"
     },
     {
-      sentence1:
-        "You need to keep trying if you want to make real progress.",
-      sentence2: { before: "You need to ", after: " if you want to make real progress." },
-      answer: "persevere"
+      sentence1: "Pay and benefits offered with a job.",
+      sentence2: { before: "This is a ", after: "." },
+      answer: "rewards package"
     },
     {
-      sentence1:
-        "One important thing is to keep a sense of humor.",
-      sentence2: { before: "One important thing is to ", after: " a sense of humor." },
-      answer: "maintain"
+      sentence1: "Extra pay for living in an expensive area.",
+      sentence2: { before: "This is called a ", after: "." },
+      answer: "weighting"
     },
     {
-      sentence1:
-        "The work on the new airport is not advancing fast enough.",
-      sentence2: { before: "The work on the new airport isn't ", after: " fast enough." },
-      answer: "progressing"
+      sentence1: "The legal right to paid holidays.",
+      sentence2: { before: "This is known as ", after: "." },
+      answer: "leave entitlement"
     },
     {
-      sentence1:
-        "The presentation ended early because of constant interruptions.",
-      sentence2: { before: "The presentation ended early because of ", after: " interruptions." },
-      answer: "persistent"
+      sentence1: "Money received for working.",
+      sentence2: { before: "This is called ", after: "." },
+      answer: "income"
     },
     {
-      sentence1:
-        "Eventually many of them go back to their old ways.",
-      sentence2: { before: "Eventually many of them ", after: " to their old ways." },
-      answer: "revert"
+      sentence1: "Money spent.",
+      sentence2: { before: "This is known as ", after: "." },
+      answer: "expenditure"
     },
     {
-      sentence1:
-        "Everyone is delighted with the quality of service you provide. Continue like this!",
-      sentence2: { before: "", after: "!" },
-      answer: "keep it up"
+      sentence1: "Enjoyment from doing a job.",
+      sentence2: { before: "This is called ", after: "." },
+      answer: "job satisfaction"
+    },
+    {
+      sentence1: "A percentage of sales earned.",
+      sentence2: { before: "This is called ", after: "." },
+      answer: "commission"
+    },
+    {
+      sentence1: "The right to buy company shares cheaply.",
+      sentence2: { before: "These are called ", after: "." },
+      answer: "stock options"
+    },
+    {
+      sentence1: "Extra rewards for good performance.",
+      sentence2: { before: "This is an ", after: "." },
+      answer: "incentive plan"
+    },
+    {
+      sentence1: "How much someone is paid per hour or week.",
+      sentence2: { before: "This is known as a ", after: "." },
+      answer: "rate"
+    },
+    {
+      sentence1: "Money paid when a job is lost.",
+      sentence2: { before: "This is called ", after: "." },
+      answer: "redundancy pay"
+    },
+    {
+      sentence1: "A reduced price for employees.",
+      sentence2: { before: "This is a ", after: "." },
+      answer: "discount"
+    },
+    {
+      sentence1: "Extra money for moving to another city.",
+      sentence2: { before: "This is a ", after: "." },
+      answer: "relocation allowance"
+    },
+    {
+      sentence1: "Sharing company profits with employees.",
+      sentence2: { before: "This is called ", after: "." },
+      answer: "profit sharing"
+    },
+    {
+      sentence1: "Earnings before tax.",
+      sentence2: { before: "This is described as ", after: " pay." },
+      answer: "gross"
+    },
+    {
+      sentence1: "Earnings after tax.",
+      sentence2: { before: "This is described as ", after: " pay." },
+      answer: "net"
+    },
+    {
+      sentence1: "Pay that rises with the cost of living.",
+      sentence2: { before: "This is ", after: "." },
+      answer: "index-linked"
+    },
+    {
+      sentence1: "Pay based on how well someone works.",
+      sentence2: { before: "This is ", after: "." },
+      answer: "performance-related"
+    },
+    {
+      sentence1: "Pay based on experience and position.",
+      sentence2: { before: "This is ", after: "." },
+      answer: "commensurate"
+    },
+    {
+      sentence1: "A large payment when leaving a job.",
+      sentence2: { before: "This is known as a ", after: "." },
+      answer: "golden handshake"
     }
   ]
 };
