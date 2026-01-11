@@ -5,7 +5,8 @@ const state = {
   screen: "intro",
   exercise: null,
   questionIndex: 0,
-  locked: false
+  locked: false,
+  selectedChapterIndex: 0
 };
 
 /********************
@@ -24,11 +25,14 @@ const exercises = {
     ],
     questions: [
       {
-        sentence1: "Last year, 33% of the population worked in secondary industries and 48% worked in the tertiary sector. This year, the figures are 27% and 53% respectively.",
-        sentence2: { before: "There has been a ", after: " of the gap between those working in different sectors of the economy." },
+        sentence1:
+          "Last year, 33% of the population worked in secondary industries and 48% worked in the tertiary sector. This year, the figures are 27% and 53% respectively.",
+        sentence2: {
+          before: "There has been a ",
+          after: " of the gap between those working in different sectors of the economy."
+        },
         answer: "narrowing"
       }
-      // (remaining questions unchanged for brevity)
     ]
   },
 
@@ -36,16 +40,11 @@ const exercises = {
     type: "choice",
     questions: [
       {
-        sentence: "The ___ in working conditions between our Denver department and our department in Chicago is very noticeable.",
+        sentence:
+          "The ___ in working conditions between our Denver department and our department in Chicago is very noticeable.",
         options: ["contrast", "compare", "comparison"],
         answer: "contrast"
-      },
-      {
-        sentence: "The two companies ___ considerably from each other.",
-        options: ["differentiate", "differ", "different"],
-        answer: "differ"
       }
-      // (remaining questions follow same pattern)
     ]
   }
 };
@@ -65,20 +64,50 @@ const sentence2El = document.getElementById("sentence-2");
 const counterEl = document.getElementById("question-counter");
 const hintEl = document.getElementById("hint");
 const wordListEl = document.getElementById("word-list");
-const chapterItems = document.querySelectorAll(".chapter-item");
+
+const chapterItems = Array.from(document.querySelectorAll(".chapter-item"));
 
 /********************
- * CORE
+ * CHAPTER SELECTION
+ ********************/
+function updateChapterSelection() {
+  chapterItems.forEach((item, index) => {
+    item.setAttribute(
+      "aria-selected",
+      index === state.selectedChapterIndex ? "true" : "false"
+    );
+  });
+}
+
+updateChapterSelection();
+
+chapterItems.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    state.selectedChapterIndex = index;
+    updateChapterSelection();
+    startSelectedExercise();
+  });
+});
+
+/********************
+ * CORE LOGIC
  ********************/
 function setScreen(name) {
   state.screen = name;
-  Object.values(screens).forEach(s => s.hidden = true);
+  Object.values(screens).forEach(s => (s.hidden = true));
   screens[name].hidden = false;
   if (name === "question") renderQuestion();
 }
 
 function normalize(v) {
   return v.trim().toLowerCase();
+}
+
+function startSelectedExercise() {
+  const selected = chapterItems[state.selectedChapterIndex];
+  state.exercise = selected.dataset.exercise;
+  state.questionIndex = 0;
+  setScreen("question");
 }
 
 function renderQuestion() {
@@ -90,13 +119,13 @@ function renderQuestion() {
 
   if (ex.type === "transform") {
     sentence1El.textContent = q.sentence1;
-    sentence2El.innerHTML = `${q.sentence2.before}<input id="answer-input" />${q.sentence2.after}`;
+    sentence2El.innerHTML =
+      `${q.sentence2.before}<input id="answer-input" />${q.sentence2.after}`;
     renderWordBox(ex.words);
-  }
-
-  if (ex.type === "choice") {
+  } else {
     sentence1El.textContent = "";
-    sentence2El.innerHTML = q.sentence.replace("___", `<input id="answer-input" />`);
+    sentence2El.innerHTML =
+      q.sentence.replace("___", `<input id="answer-input" />`);
     renderWordBox(q.options);
   }
 
@@ -110,8 +139,9 @@ function renderWordBox(words) {
     li.className = "word";
     li.textContent = word;
     li.onclick = () => {
-      document.getElementById("answer-input").value = word;
-      document.getElementById("answer-input").focus();
+      const input = document.getElementById("answer-input");
+      input.value = word;
+      input.focus();
     };
     wordListEl.appendChild(li);
   });
@@ -119,6 +149,7 @@ function renderWordBox(words) {
 
 function validate() {
   if (state.locked) return;
+
   const input = document.getElementById("answer-input");
   if (!input.value.trim()) return;
 
@@ -128,9 +159,11 @@ function validate() {
   if (normalize(input.value) === normalize(correct)) {
     input.classList.add("correct");
     state.locked = true;
+
     setTimeout(() => {
       state.questionIndex++;
       state.locked = false;
+
       if (state.questionIndex < ex.questions.length) {
         renderQuestion();
       } else {
@@ -141,8 +174,10 @@ function validate() {
     input.classList.add("incorrect");
     input.value = "";
     input.focus();
+
     hintEl.textContent = `Correct answer: ${correct}`;
     hintEl.hidden = false;
+
     setTimeout(() => hintEl.classList.add("fade"), 1000);
     setTimeout(() => {
       hintEl.hidden = true;
@@ -153,20 +188,35 @@ function validate() {
 }
 
 /********************
- * EVENTS
+ * KEYBOARD
  ********************/
-chapterItems.forEach(item => {
-  item.onclick = () => {
-    chapterItems.forEach(i => i.setAttribute("aria-selected", "false"));
-    item.setAttribute("aria-selected", "true");
-    state.exercise = item.dataset.exercise;
-    state.questionIndex = 0;
-    setScreen("question");
-  };
-});
-
 document.addEventListener("keydown", e => {
+  if (state.screen === "chapters") {
+    if (e.key === "ArrowDown") {
+      state.selectedChapterIndex =
+        (state.selectedChapterIndex + 1) % chapterItems.length;
+      updateChapterSelection();
+      e.preventDefault();
+      return;
+    }
+
+    if (e.key === "ArrowUp") {
+      state.selectedChapterIndex =
+        (state.selectedChapterIndex - 1 + chapterItems.length) %
+        chapterItems.length;
+      updateChapterSelection();
+      e.preventDefault();
+      return;
+    }
+
+    if (e.key === "Enter") {
+      startSelectedExercise();
+      return;
+    }
+  }
+
   if (e.key !== "Enter") return;
+
   if (state.screen === "intro") setScreen("chapters");
   else if (state.screen === "question") validate();
   else if (state.screen === "complete") setScreen("chapters");
