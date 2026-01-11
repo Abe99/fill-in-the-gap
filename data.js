@@ -1,18 +1,12 @@
 /*
   TOEIC PRACTICE – DATA ONLY
-  ---------------------------------
-  Exercises:
-  1. Trends & Changes (transform)
-  2. Comparing & Contrasting (choice)
-  3. Computers & IT – Hardware (long-transform)
-  4. Computers & IT – Internet (long-transform)
-  5. Condition & Requirement (unscramble)
+  Safe to edit. No logic. No DOM.
 */
 
 const exercises = {
 
   /* ======================================================
-     EXERCISE 1 – TRENDS & CHANGES (24 QUESTIONS)
+     EXERCISE 1 – TRENDS & CHANGES
      ====================================================== */
   trends: {
     type: "transform",
@@ -28,121 +22,98 @@ const exercises = {
       { sentence1: "Last year, 33% of the population worked in secondary industries and 48% worked in the tertiary sector. This year, the figures are 27% and 53% respectively.",
         sentence2: { before: "There has been a ", after: " of the gap between those working in different sectors of the economy." },
         answer: "narrowing" },
-
       { sentence1: "Last year, the overseas market accounted for 60% of our sales. This year, it only accounts for about 15%.",
         sentence2: { before: "There has been a ", after: " in overseas sales figures in the last year." },
         answer: "sharp decline / fall" },
-
       { sentence1: "People can afford to buy more and live more comfortably than they could twenty years ago.",
         sentence2: { before: "There has been a ", after: " in the standard of living." },
         answer: "general improvement" },
-
       { sentence1: "Because our company is bigger now than it was two years ago, we need to recruit more employees.",
         sentence2: { before: "Because of company ", after: " over the last two years, we need more workers." },
         answer: "expansion" },
-
       { sentence1: "American travelers abroad have discovered that they can buy more foreign currency with their dollar.",
         sentence2: { before: "There has been a ", after: " of the dollar." },
         answer: "strengthening" },
-
       { sentence1: "It is now much harder to import goods into the country than it was a few years ago.",
         sentence2: { before: "There has been a ", after: " of border controls for imports." },
         answer: "tightening up" },
-
-      { sentence1: "In 2002 inflation was running at about 4%, in 2003 it was 4.5%, in 2004 it was 5% and in 2005 it was 5.5%.",
-        sentence2: { before: "Between 2002 and 2005, there was a ", after: " in the rate of inflation." },
+      { sentence1: "Between 2002 and 2005 inflation rose steadily.",
+        sentence2: { before: "There was a ", after: " in the rate of inflation." },
         answer: "constant rise" },
-
-      { sentence1: "Last year, the company employed 200 people. This year it now has over 1000 employees.",
-        sentence2: { before: "There has been a ", after: " in the number of employees working for the company." },
+      { sentence1: "The company grew from 200 to 1000 employees.",
+        sentence2: { before: "There was a ", after: " in employee numbers." },
         answer: "dramatic increase" },
-
-      { sentence1: "Unemployment figures have dropped by about 2% every year for the last four years.",
-        sentence2: { before: "There has been a ", after: " in unemployment figures over the last four years." },
+      { sentence1: "Unemployment figures dropped every year.",
+        sentence2: { before: "There was a ", after: " in unemployment." },
         answer: "steady decrease" },
-
-      { sentence1: "Over the next few years, some management positions in the company will be gradually removed.",
-        sentence2: { before: "Some management positions will be ", after: " over the next few years." },
+      { sentence1: "Some management positions will be removed gradually.",
+        sentence2: { before: "They will be ", after: "." },
         answer: "phased out" },
-
-      { sentence1: "Because of forecasts for high demand in the future, we need to increase our stocks.",
-        sentence2: { before: "We need to ", after: " our stocks to cope with future demand." },
+      { sentence1: "We need to increase stocks.",
+        sentence2: { before: "We need to ", after: " our stocks." },
         answer: "build up" },
-
-      { sentence1: "The government will spend less on the welfare system next year.",
-        sentence2: { before: "There are going to be ", after: " in welfare spending next year." },
+      { sentence1: "The government will spend less on welfare.",
+        sentence2: { before: "There will be ", after: " in welfare spending." },
         answer: "cuts" },
-
-      { sentence1: "Public services are less reliable now than they were five years ago.",
-        sentence2: { before: "There has been a ", after: " in public services reliability over the last five years." },
+      { sentence1: "Public services are less reliable.",
+        sentence2: { before: "There has been a ", after: "." },
         answer: "deterioration" },
-
-      { sentence1: "Nowadays, more and more people are traveling abroad for business and pleasure.",
-        sentence2: { before: "There has been ", after: " in the overseas travel market." },
+      { sentence1: "More people are traveling abroad.",
+        sentence2: { before: "There has been ", after: " in overseas travel." },
         answer: "considerable growth" },
-
-      { sentence1: "Compared with five years ago, more people are shopping in out-of-town malls than in local stores.",
-        sentence2: { before: "There has been an ", after: " in the number of people shopping in out-of-town malls." },
+      { sentence1: "Out-of-town shopping is increasing.",
+        sentence2: { before: "There has been an ", after: "." },
         answer: "upward trend" },
-
-      { sentence1: "Unless your work visibly improves, we will have to recommend a transfer to another department.",
-        sentence2: { before: "We need to see some ", after: " in your work." },
+      { sentence1: "Your work must improve.",
+        sentence2: { before: "We need to see ", after: "." },
         answer: "marked progress" },
-
-      { sentence1: "Young Americans want to travel, meet new people and see more of the world.",
-        sentence2: { before: "Young Americans want to ", after: " their horizons." },
+      { sentence1: "Young people want to see more of the world.",
+        sentence2: { before: "They want to ", after: " their horizons." },
         answer: "broaden" },
-
-      { sentence1: "Over the next two months, we plan to make our office computers faster.",
-        sentence2: { before: "We plan to ", after: " our office computers." },
+      { sentence1: "We will improve our computers.",
+        sentence2: { before: "We will ", after: " our computers." },
         answer: "upgrade" },
-
-      { sentence1: "We are trying to make the accounting system simpler.",
-        sentence2: { before: "We are trying to ", after: " the accounting system." },
+      { sentence1: "We want to simplify accounting.",
+        sentence2: { before: "We want to ", after: " the accounting system." },
         answer: "streamline" },
-
-      { sentence1: "Making the company smaller has made it more profitable.",
-        sentence2: { before: "", after: " the company has made it more profitable." },
+      { sentence1: "The company became smaller and more profitable.",
+        sentence2: { before: "", after: " made the company more profitable." },
         answer: "downsizing" },
-
-      { sentence1: "Standards of service have gone down recently.",
-        sentence2: { before: "Standards of service have ", after: " recently." },
+      { sentence1: "Service standards have gone down.",
+        sentence2: { before: "Standards have ", after: "." },
         answer: "slipped" },
-
-      { sentence1: "Property prices have gone up and down this year.",
-        sentence2: { before: "Property prices have ", after: " this year." },
+      { sentence1: "Property prices went up and down.",
+        sentence2: { before: "Prices have ", after: "." },
         answer: "fluctuated" },
-
-      { sentence1: "We have made small changes to the rules.",
-        sentence2: { before: "We have ", after: " the rules." },
+      { sentence1: "Small changes were made to the rules.",
+        sentence2: { before: "The rules were ", after: "." },
         answer: "amended" },
-
-      { sentence1: "The company plans to change its marketing division.",
-        sentence2: { before: "The company plans to ", after: " its marketing division." },
+      { sentence1: "The marketing division will be changed.",
+        sentence2: { before: "The company will ", after: " its marketing division." },
         answer: "restructure" }
     ]
   },
 
   /* ======================================================
-     EXERCISE 2 – COMPARING & CONTRASTING (15 QUESTIONS)
+     EXERCISE 2 – COMPARING & CONTRASTING
      ====================================================== */
   compare: {
     type: "choice",
     questions: [
-      { sentence: "The ___ in working conditions between departments is noticeable.", options: ["contrast","compare","comparison"], answer: "contrast" },
-      { sentence: "The two companies ___ considerably from each other.", options: ["differentiate","differ","different"], answer: "differ" },
-      { sentence: "It is difficult to ___ between genuine illness and absence.", options: ["differentiate","differ","contrast"], answer: "differentiate" },
+      { sentence: "The ___ in working conditions is noticeable.", options: ["contrast","compare","comparison"], answer: "contrast" },
+      { sentence: "The two companies ___ considerably.", options: ["differentiate","differ","different"], answer: "differ" },
+      { sentence: "It is difficult to ___ between them.", options: ["differentiate","differ","contrast"], answer: "differentiate" },
       { sentence: "The software shares common ___.", options: ["characters","characterizes","characteristics"], answer: "characteristics" },
       { sentence: "There is a clear ___.", options: ["distinguish","distinctive","distinction"], answer: "distinction" },
       { sentence: "___ with 15 years ago, PCs are cheaper.", options: ["Compared","Compare","Comparing"], answer: "Compared" },
-      { sentence: "There is no ___ between the two products.", options: ["compare","comparison","contrast"], answer: "comparison" },
-      { sentence: "Our phones ___ those of competitors.", options: ["similar to","alike","resemble"], answer: "resemble" },
+      { sentence: "There is no ___ between them.", options: ["compare","comparison","contrast"], answer: "comparison" },
+      { sentence: "Phones ___ each other.", options: ["similar to","alike","resemble"], answer: "resemble" },
       { sentence: "There are several ___.", options: ["similarities","similarly","similar to"], answer: "similarities" },
       { sentence: "___, hackers can steal money.", options: ["Exactly","In the same way","Just as"], answer: "In the same way" },
       { sentence: "The quality is excellent. ___, the price.", options: ["Likewise","Alike","Likeness"], answer: "Likewise" },
-      { sentence: "The TOEFL tests general English. ___, the TOEIC focuses on business.", options: ["In contrast to","Although","By way of contrast"], answer: "By way of contrast" },
-      { sentence: "The company struggled. ___, it made a profit.", options: ["Nevertheless","Even so","However"], answer: "Nevertheless" },
-      { sentence: "There is a ___ between employment sectors.", options: ["discrepancy","discrimination","differential"], answer: "discrepancy" },
+      { sentence: "___, the TOEIC focuses on business.", options: ["In contrast to","Although","By way of contrast"], answer: "By way of contrast" },
+      { sentence: "___, the company made a profit.", options: ["Nevertheless","Even so","However"], answer: "Nevertheless" },
+      { sentence: "There is a ___ between sectors.", options: ["discrepancy","discrimination","differential"], answer: "discrepancy" },
       { sentence: "The new contract applies, ___ the old one.", options: ["unlike","whereas","whereby"], answer: "whereas" }
     ]
   },
@@ -159,7 +130,7 @@ const exercises = {
       "keyboard","printer","scanner","mouse"
     ],
     text: `
-This is my new (1) ___ computer that sits on a desk (I've also got a (2) ___).
+This is my new (1) ___ computer (I've also got a (2) ___).
 There are six main (3) ___. The first is the (4) ___.
 It carries the (5) ___ including the (6) ___.
 Mine has a high (7) ___.
@@ -210,27 +181,66 @@ Last week it kept (22) ___. I should (23) ___ it.
   },
 
   /* ======================================================
-     EXERCISE 5 – CONDITION & REQUIREMENT (UNSCRAMBLE)
+     EXERCISE 5 – CONDITION & REQUIREMENT
      ====================================================== */
   conditions: {
     type: "unscramble",
     questions: [
-      { sentence: "___ customers continue to demand the BD17 model mobile, Telelink will continue to produce it.", scrambled: "sa nlgo sa", answer: "as long as" },
-      { sentence: "___ we receive your payment within ten days, we will charge interest.", scrambled: "seusln", answer: "unless" },
-      { sentence: "We offer credit ___ you maintain repayments.", scrambled: "no incotnido atth", answer: "on condition that" },
-      { sentence: "Everyone will get a pay rise ___ we meet targets.", scrambled: "vogrnipid ttha", answer: "providing that" },
-      { sentence: "The main ___ for spending is stability.", scrambled: "retncopiinod", answer: "condition" },
+      { sentence: "___ customers continue to demand the BD17 model, it will be produced.", scrambled: "sa nlgo sa", answer: "as long as" },
+      { sentence: "___ we receive payment, interest will be charged.", scrambled: "seusln", answer: "unless" },
+      { sentence: "Credit is offered ___ repayments are regular.", scrambled: "no incotnido atth", answer: "on condition that" },
+      { sentence: "Everyone will get a rise ___ targets are met.", scrambled: "vogrnipid ttha", answer: "providing that" },
+      { sentence: "The main ___ is economic stability.", scrambled: "retncopiinod", answer: "condition" },
       { sentence: "___ of fire, break glass.", scrambled: "ni eacs fo", answer: "in case of" },
-      { sentence: "___ a delay, passengers receive vouchers.", scrambled: "ni het nvete fo", answer: "in the event of" },
-      { sentence: "The only ___ was contract length.", scrambled: "aputonstili", answer: "stipulation" },
+      { sentence: "___ a delay, vouchers will be issued.", scrambled: "ni het nvete fo", answer: "in the event of" },
+      { sentence: "The only ___ was the contract length.", scrambled: "aputonstili", answer: "stipulation" },
       { sentence: "Management has ___ trust.", scrambled: "nidncoalitoun", answer: "unconditional" },
       { sentence: "___ the flight is on time, we will meet you.", scrambled: "sumsagin hatt", answer: "assuming that" },
-      { sentence: "Delivery proceeds ___ the order is unchanged.", scrambled: "no teh autonmsspi hatt", answer: "on the assumption that" },
-      { sentence: "Driving is a ___ of the job.", scrambled: "quereesisitpr", answer: "prerequisites" },
-      { sentence: "Agree to the ___ in the contract.", scrambled: "remst and ioctnsodin", answer: "terms and conditions" },
-      { sentence: "It is a ___ of the company.", scrambled: "nmreiretque", answer: "requirement" },
+      { sentence: "Delivery proceeds ___ nothing changes.", scrambled: "no teh autonmsspi hatt", answer: "on the assumption that" },
+      { sentence: "Driving is a job ___.", scrambled: "quereesisitpr", answer: "prerequisites" },
+      { sentence: "Agree to the ___.", scrambled: "remst and ioctnsodin", answer: "terms and conditions" },
+      { sentence: "It is a company ___.", scrambled: "nmreiretque", answer: "requirement" },
       { sentence: "If you have a query, call us. ___, email us.", scrambled: "niifagl ttha", answer: "failing that" },
-      { sentence: "We need 20 people, ___ it can't proceed.", scrambled: "ehewotris", answer: "otherwise" }
+      { sentence: "We need 20 people, ___ it cannot proceed.", scrambled: "ehewotris", answer: "otherwise" }
+    ]
+  },
+
+  /* ======================================================
+     EXERCISE 6 – CONFUSING WORDS
+     ====================================================== */
+  confusing: {
+    type: "choice",
+    questions: [
+      { sentence: "Try to make your report as ___ as possible.", options: ["subjective","objectionable","subjected","objective"], answer: "objective" },
+      { sentence: "Inspectors regularly ___ our kitchens.", options: ["inspect","control","study","analyze"], answer: "inspect" },
+      { sentence: "___ workers are often rewarded.", options: ["conscious","conscientious","conscience","consciousness"], answer: "conscientious" },
+      { sentence: "Prices are rising on the ___ that fuel costs will rise.", options: ["consumption","destruction","assumption","presumption"], answer: "assumption" },
+      { sentence: "The fire caused a lot of ___ to the building.", options: ["damage","harm","injury","wound"], answer: "damage" },
+      { sentence: "Subsidies helped to ___ closures.", options: ["prevent","preventive","avoidance","avoid"], answer: "prevent" },
+      { sentence: "He intends to ___ down new rules.", options: ["lying","lie","laying","lay"], answer: "lay" },
+      { sentence: "Cuts will have a serious ___ on sales.", options: ["effective","effect","affect","affection"], answer: "effect" },
+      { sentence: "You need a ___ to take photos.", options: ["permit","permission","permissible","permitting"], answer: "permit" },
+      { sentence: "The manager talked ___ about punctuality.", options: ["briefly","briefing","shortly","shorts"], answer: "briefly" },
+      { sentence: "The office is closed ___ it is decorated.", options: ["during","while","for","throughout"], answer: "while" },
+      { sentence: "Can you ___ me on this?", options: ["advisory","advisable","advice","advise"], answer: "advise" },
+      { sentence: "Economic ___ stagnated.", options: ["active","action","activity","activist"], answer: "activity" },
+      { sentence: "___ their regular job, many work evenings.", options: ["by","beside","between","besides"], answer: "besides" },
+      { sentence: "These ___ breakdowns waste time.", options: ["continuing","continuous","continuation","continual"], answer: "continual" },
+      { sentence: "She was very ___ of our efforts.", options: ["appreciable","appreciative","appreciating","appreciate"], answer: "appreciative" },
+      { sentence: "We didn’t stand a ___.", options: ["possibility","probability","chance","opportunity"], answer: "chance" },
+      { sentence: "The proposals were excellent. ___, they worked.", options: ["Moreover","However","Nevertheless","Although"], answer: "Moreover" },
+      { sentence: "We must remain ___ to customer needs.", options: ["sensible","sensitive","sensitivity","sensibility"], answer: "sensitive" },
+      { sentence: "A ___ amount of time is lost.", options: ["considerate","considerable","consistent","convenient"], answer: "considerable" },
+      { sentence: "He refused to wear a tie on ___.", options: ["principle","principality","principal","principally"], answer: "principle" },
+      { sentence: "Nobody raised any ___.", options: ["criticism","complaints","protests","objections"], answer: "objections" },
+      { sentence: "The museum contains ___ works of art.", options: ["worthless","valueless","priceless","useless"], answer: "priceless" },
+      { sentence: "Many people are still looking for ___.", options: ["work","job","profession","career"], answer: "work" },
+      { sentence: "It is a ___ company.", options: ["respectable","respectful","respecting","respective"], answer: "respectable" },
+      { sentence: "We were forced to ___ prices.", options: ["rise","raze","raise","arise"], answer: "raise" },
+      { sentence: "The bank agreed to ___ us the money.", options: ["lend","borrow","lease","rent"], answer: "lend" },
+      { sentence: "___ me to lock up.", options: ["remembrance","reminisce","remember","remind"], answer: "remind" },
+      { sentence: "Because of the ___ situation, stores closed.", options: ["economical","economic","economize","economics"], answer: "economic" },
+      { sentence: "Send everyone a ___ before the meeting.", options: ["notify","notice","note","notification"], answer: "note" }
     ]
   }
 
