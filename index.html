@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,17 +13,22 @@
   <!-- INTRO -->
   <section id="screen-intro" class="screen">
     <h1>TOEIC Practice</h1>
-    <p>Complete the sentences using the correct word or expression.</p>
+    <p>Complete the exercises using the correct word or expression.</p>
     <p class="instruction">Press <strong>Enter</strong> to begin</p>
   </section>
 
   <!-- CHAPTER SELECTION -->
   <section id="screen-chapters" class="screen" hidden>
-    <h2>Select a Chapter</h2>
+    <h2>Select an Exercise</h2>
     <ul class="chapter-list">
-      <li class="chapter-item" aria-selected="true">Chapter 1 – Trends & Changes</li>
+      <li class="chapter-item" data-exercise="trends" aria-selected="true">
+        Chapter 1 – Trends & Changes
+      </li>
+      <li class="chapter-item" data-exercise="compare">
+        Comparing & Contrasting
+      </li>
     </ul>
-    <p class="instruction">Press <strong>Enter</strong> to start</p>
+    <p class="instruction">Use mouse or press <strong>Enter</strong></p>
   </section>
 
   <!-- QUESTION -->
@@ -48,8 +52,8 @@
 
   <!-- COMPLETE -->
   <section id="screen-complete" class="screen" hidden>
-    <h2>Chapter Complete</h2>
-    <p class="instruction">Press <strong>Enter</strong> to return to chapters</p>
+    <h2>Exercise Complete</h2>
+    <p class="instruction">Press <strong>Enter</strong> to return</p>
   </section>
 
 </main>
